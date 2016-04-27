@@ -15,5 +15,6 @@ namespace Prototype.Models {
         public virtual ICollection<Reclamacao> Reclamacoes { get; set; }
         public virtual ICollection<Reclamacao> ReclamacoesSeguidas { get; set; }
 
+
     }
 }

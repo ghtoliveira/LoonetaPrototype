@@ -1,0 +1,58 @@
+﻿@model Prototype.Models.Reclamacao
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Reclamacao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DataDoAContecimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataDoAContecimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Endereco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Endereco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cep)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cep)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VotosPositivos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VotosPositivos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VotosNegativos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VotosNegativos)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
