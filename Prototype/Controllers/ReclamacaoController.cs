@@ -11,6 +11,7 @@ using Prototype.Models;
 
 namespace Prototype.Controllers
 {
+    [Authorize]
     public class ReclamacaoController : Controller
     {
         private LoonetaContext db = new LoonetaContext();
@@ -37,6 +38,7 @@ namespace Prototype.Controllers
         }
 
         // GET: Reclamacao/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();

@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<Prototype.Models.Reclamacao>
 
+
 @{
     ViewBag.Title = "Index";
 }
@@ -46,11 +47,15 @@
         <td>
             @Html.DisplayFor(modelItem => item.VotosNegativos)
         </td>
+@if (Context.User.Identity.IsAuthenticated) {
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            
         </td>
+}
     </tr>
 }
 
