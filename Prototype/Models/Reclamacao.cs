@@ -6,6 +6,8 @@ using System.Web;
 namespace Prototype.Models {
     public class Reclamacao {
         public int ID { get; set; }
+        public string Titulo { get; set; }
+        public string Descricao { get; set; }
         public DateTime DataDoAContecimento { get; set; }
         public string Endereco { get; set; }
         public int Cep { get; set; }
