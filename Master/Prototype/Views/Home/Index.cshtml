@@ -2,23 +2,72 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>Looneta</h1>
-    <p class="lead">Descubra, compartilhe e solucione problemas de sua região com milhares de usuários.</p>
-    <p><a href="" class="btn btn-primary btn-lg">Saiba mais&raquo;</a></p>
-</div>
+<style>
+    .geral {
+        background-color: rgba(30, 30, 30, 0.3);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        padding-top: 100px;
+    }
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Descubra problemas...</h2>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Saiba mais &raquo;</a></p>
+    h1 {
+        font-size: small;
+    }
+
+    .texto {
+        background-color: rgba(140, 140, 140, 0.8);
+        text-align: center;
+        color: white;
+    }
+</style>
+
+<body class="geral">
+    <div class="jumbotron texto">
+
+        <h2>Looneta</h2>
+
+        <div>
+            <p>
+                Bem-Vindo ao Looneta. <br /> Looneta é um site que permite você visualizar reclamações e comentar nelas.
+            </p>
+        </div>
+
+        <!--LOGIN-->
+
+        <form method="post">
+            <div class="form-group col-md-4 col-md-offset-4 jumbotron" style="background-color:rgba(140, 140, 140, 0.8)">
+
+                <input type="text" placeholder="Usuário" class="form-control" />
+                <br />
+
+                <input type="password" placeholder="Senha" class="form-control" />
+                <br /><br />
+
+                <button class="btn btn-group-justified btn-lg btn-success">Login</button>
+            </div>
+        </form>
+
+        <!--Fim DO LOGIN-->
+
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Reclame aqui!</h3>
+                <p>Aqui voce pode mostrar a sua indignação com as condições de sua cidade.</p>
+                <!--
+                    <p><a class="btn btn-default" href="http://www.asp.net/mvc/tutorials/getting-started-with-ef-using-mvc/">See the tutorial &raquo;</a></p>
+                -->
+            </div>
+            <div class="col-md-6">
+                <h3>Seja ativo!</h3>
+                <p>Além de mostrar a suas sujestões, vote e comente em sujestões de outros usuários. Essa é a melhor maneira de melhorar a cidade.</p>
+                <!--
+                <p><a class="btn btn-default" href="http://code.msdn.microsoft.com/ASPNET-MVC-Application-b01a9fe8">Download &raquo;</a></p>
+                    -->
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Compartilhe problemas...</h2>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Saiba mais&raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Solucione problemas...</h2>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Saiba mais&raquo;</a></p>
-    </div>
-</div>
+</body>
