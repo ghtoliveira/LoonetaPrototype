@@ -5,12 +5,19 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<style>
+    
+</style>
+
+<h2>Reclamações</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+
+<div class="jumbotron texto container row">
+    <!--<table class="table-hover">-->
+    <!--
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Titulo)
@@ -35,40 +42,71 @@
         </th>
         <th></th>
     </tr>
+        -->
+    @foreach (var item in Model)
+    {
+        <!--
+        <tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Titulo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Descricao)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DataDoAContecimento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Endereco)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cep)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.VotosPositivos)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.VotosNegativos)
-        </td>
-@if (Context.User.Identity.IsAuthenticated) {
-        <td>
-            
-            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-            
-        </td>
-}
-    </tr>
-}
+            <td>
+                <h3>@Html.DisplayFor(modelItem => item.Titulo)</h3> <br /><br />
+            </td>
 
-</table>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataDoAContecimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Endereco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cep)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VotosPositivos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VotosNegativos)
+            </td>
+
+        </tr>
+
+        <tr>
+            <td class="col-md-4">
+                <textarea class="col-md-8">
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </textarea>
+            </td>
+
+            @if (Context.User.Identity.IsAuthenticated)
+            {
+                <td>
+
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+
+                </td>
+            }
+
+        </tr>
+        -->
+        <div>
+            <h3>@Html.DisplayFor(modelItem => item.Titulo) </h3>
+
+            <p>@Html.DisplayFor(modelItem => item.Endereco)</p>
+
+            <div>
+                <textarea readonly="readonly"  style="background-color:inherit; color:white; ">@Html.DisplayFor(modelItem => item.Descricao)</textarea>
+            </div>
+            <img src="https://oslimpatrilhos.files.wordpress.com/2010/06/buracos-na-ucranea-diferente.jpg" class="img-responsive" style="height:auto" />
+
+
+            <hr /><br /><br />
+
+        </div>
+
+    }
+
+    <!--</table>-->
+
+</div>
