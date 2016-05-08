@@ -6,7 +6,7 @@
 }
 
 <style>
-    .tags{
+    .tags {
         font-size: 12px;
     }
 </style>
@@ -97,21 +97,35 @@
 
             <div class="row">
                 <div class="col-md-10">
-                    <p class="col-md-offset-0">@Html.DisplayFor(modelItem => item.Endereco) 
-                        <span class="tags col-md-offset-5">Votos Positivos: @Html.DisplayFor(modelItem => item.VotosPositivos) 
-                                                           Votos Negativos: @Html.DisplayFor(modelItem => item.VotosNegativos)</span>
-                        
+                    <p class="col-md-offset-0">
+                        @Html.DisplayFor(modelItem => item.Endereco)
+                        <span class="tags col-md-offset-5">
+                            <!--AQUI É ONDE VÃO AS TAGS, SE TIVER TAGS-->
+                            Votos Positivos: @Html.DisplayFor(modelItem => item.VotosPositivos)
+                            Votos Negativos: @Html.DisplayFor(modelItem => item.VotosNegativos)
+                        </span>
                     </p>
-                    
                 </div>
+
+                <div class="col-md-offset-10">
+                    <p class="text">Tags ou rates.</p>
+                </div>
+
             </div>
 
-            <div>
-                <textarea readonly="readonly"  style="background-color:inherit; color:white; ">@Html.DisplayFor(modelItem => item.Descricao)</textarea>
-            </div>
-            <img src="https://oslimpatrilhos.files.wordpress.com/2010/06/buracos-na-ucranea-diferente.jpg" class="img-responsive" style="height:auto" />
+            <div class="row">
+                <div class="col-md-6">
+                    <textarea readonly="readonly" style="background-color:inherit; color:white; ">@Html.DisplayFor(modelItem => item.Descricao)</textarea>
+                </div>
 
-            
+                <div class="col-md-offset-10">
+                    <img src="https://oslimpatrilhos.files.wordpress.com/2010/06/buracos-na-ucranea-diferente.jpg" style="max-width:200px; max-height:200px" class="img-responsive img-thumbnail" style="height:auto" />
+                </div>
+
+            </div>
+
+
+
             <hr /><br /><br />
 
         </div>
